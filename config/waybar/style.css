@@ -1,0 +1,104 @@
+@import "mocha.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: monospace;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: alpha(@base, 0.5);
+    color: @text;
+    /* border-bottom: 5px solid rgba(30, 34, 42, 0.5); */
+    /* padding-bottom: 5px; */
+}
+
+/*
+#workspaces button {
+    padding: 0 7px;
+    background: #81a1c1;
+    color: @surface0;
+    border-bottom: 2px solid #4c566a;
+}
+
+#workspaces button.focused {
+    background: #88c0d0;
+    border-bottom: 2px solid #4c566a;
+}
+*/
+
+/*
+#custom-date, #mode, #clock, #battery, #wireplumber, #network {
+    padding: 5 10px;
+    border-bottom: 2px solid #4c566a;
+}
+*/
+
+.module {
+    padding: 5 10px;
+    border-radius: 3px;
+}
+
+/*
+#custom-date {
+	background: #5e81ac;
+	color: @surface0;
+}
+*/
+
+/*
+#mode {
+    background: #8fbcbb;
+    color: @surface0;
+}
+*/
+
+#clock {
+    background-color: @mauve;
+    color: @surface0;
+}
+
+#battery {
+    background-color: @green;
+    color: @surface0;
+}
+
+
+#battery.charging {
+    color: @surface0;
+    background-color: @green;
+}
+
+@keyframes blink {
+    to {
+        background-color: @red;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network {
+	background-color: @red;
+	color: @surface0;
+}
+
+#wireplumber {
+	background-color: @yellow;
+	color: @surface0;
+}
+
+#backlight {
+	background-color: @pink;
+	color: @surface0;
+}

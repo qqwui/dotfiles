@@ -1,0 +1,14 @@
+[Unit]
+Description=Lock the screen
+Before=sleep.target
+
+[Service]
+User=%I
+Type=forking
+Environment=WAYLAND_DISPLAY=wayland-1
+Environment=XDG_RUNTIME_DIR=/run/user/%I
+ExecStart=/usr/bin/waylock -fork-on-lock
+ExecStartPost=/usr/bin/sleep 1
+
+[Install]
+WantedBy=sleep.target
