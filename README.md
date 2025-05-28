@@ -10,3 +10,8 @@ This is a really messy dump of my configs. Don't expect them to be clean or to w
 - wallpaper: swaybg
 - shell: zsh (om-my-zsh)
 - terminal: kitty
+
+## Screenshots
+
+![hyfetch](screenshots/hyfetch.webp)
+![wofi](screenshots/wofi.webp)
