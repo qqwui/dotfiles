@@ -15,4 +15,3 @@ This is a really messy dump of my configs. Don't expect them to be clean or to w
 ## Screenshots
 
 ![hyfetch](screenshots/hyfetch.webp)
-![wofi](screenshots/wofi.webp)
