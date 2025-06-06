@@ -61,14 +61,14 @@ window#waybar {
 }
 
 #battery {
-    background-color: @green;
+    background-color: @blue;
     color: @surface0;
 }
 
 
 #battery.charging {
     color: @surface0;
-    background-color: @green;
+    background-color: @blue;
 }
 
 @keyframes blink {
@@ -89,16 +89,21 @@ window#waybar {
 }
 
 #network {
-	background-color: @red;
-	color: @surface0;
-}
-
-#wireplumber {
 	background-color: @yellow;
 	color: @surface0;
 }
 
-#backlight {
-	background-color: @pink;
+#wireplumber {
+	background-color: @peach;
 	color: @surface0;
+}
+
+#backlight {
+	background-color: @green;
+	color: @surface0;
+}
+
+#custom-sunset {
+    background-color: @red;
+    color: @surface0;
 }
