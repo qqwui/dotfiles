@@ -15,6 +15,7 @@
     ],
     "modules-right": [
         "custom/sunset",
+        "power-profiles-daemon",
         "wireplumber",
         "network",
         "backlight",
@@ -40,12 +41,14 @@
         "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
+        "tooltip": false,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
         "on-click": "brightnessctl s 1%",
+        "tooltip": false,
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
@@ -64,17 +67,17 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    // "power-profiles-daemon": {
-    //   "format": "{icon}",
-    //   "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    //   "tooltip": ,
-    //   "format-icons": {
-    //     "default": "",
-    //     "performance": "",
-    //     "balanced": "",
-    //     "power-saver": ""
-    //   }
-    // },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "Performance ",
+        "balanced": "Balanced ",
+        "power-saver": "Power Saving "
+      }
+    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "Wifi ({signalStrength}%) ",
@@ -106,7 +109,9 @@
 		}
     },
     "custom/sunset": {
-        "format": "Night Light ",
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Night Light",
         "on-click": "killall -s SIGUSR1 wlsunset"
     }
 }

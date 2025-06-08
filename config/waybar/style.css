@@ -103,7 +103,7 @@ window#waybar {
 	color: @surface0;
 }
 
-#custom-sunset {
+#power-profiles-daemon {
     background-color: @red;
     color: @surface0;
 }
